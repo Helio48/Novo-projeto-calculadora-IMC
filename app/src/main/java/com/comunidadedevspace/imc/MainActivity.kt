@@ -15,9 +15,12 @@ class MainActivity : AppCompatActivity() {
         val btn_calcular = findViewById<Button>(R.id.btn_calcular)
 
         btn_calcular.setOnClickListener {
-            val peso = edtpeso.text
-            val altura = edtaltura.text
-            println("")
+            val peso: Float = edtpeso.text.toString().toFloat()
+            val altura: Float = edtaltura.text.toString().toFloat()
+
+            val alturaQ2 = altura * altura
+            val resultado = peso / alturaQ2
+            println("SEU IMC É DE:" + resultado )
         }
     }
 }
